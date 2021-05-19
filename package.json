@@ -13,6 +13,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.6.0",
     "xml-js": "^1.6.11"
   },
   "devDependencies": {
