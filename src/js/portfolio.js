@@ -20,17 +20,11 @@ const delayStep = 50;
 
 const data = [
   {
-    img: danslesgolfs2015,
-    title: "Dans les Golfs (2015)",
-    company: "Infogammer Limited Partnership",
-    builtWith: `ASP.NET MVC 5`,
-    description: ``,
-  },
-  {
     img: kingfreshfarm,
     title: "King Fresh Farm",
     company: "Freelance Job",
     builtWith: `WordPress, Elementor, TranslatePress`,
+    link: "https://www.kingfreshfarm.com",
     description: ``,
   },
   {
@@ -38,6 +32,7 @@ const data = [
     title: "SMK Steel",
     company: "Freelance Job",
     builtWith: `Vue.js, Gridsome`,
+    link: "https://www.smksteel.com",
     description: ``,
   },
   {
@@ -45,6 +40,76 @@ const data = [
     title: "Tropical Green",
     company: "Freelance Job",
     builtWith: `WordPress, Elementor`,
+    link: "https://www.tgfresh.com",
+    description: ``,
+  },
+  {
+    img: mekongmoments,
+    title: "Mekong Moments",
+    company: "Chameleon Strategies.co, ltd.",
+    builtWith: `Angular.js, Node.js, MongoDB`,
+    link: "https://www.mekongmoments.com",
+    description: ``,
+  },
+  {
+    img: mekongmomentsInfo,
+    title: "Mekong Moments Information",
+    company: "Chameleon Strategies.co, ltd.",
+    builtWith: `Angular.js, Node.js, MongoDB`,
+    link: "https://www.mekongmoments.info",
+    description: ``,
+  },
+  {
+    img: mongoliaTravel,
+    title: "Mongolia.travel",
+    company: "Chameleon Strategies.co, ltd.",
+    builtWith: `Vue.js, Node.js, MongoDB`,
+    link: "https://www.mongolia.travel",
+    description: ``,
+  },
+  {
+    img: inspiringlaos,
+    title: "Inspiring Laos",
+    company: "Chameleon Strategies.co, ltd.",
+    builtWith: `React.js, Node.js, MongoDB`,
+    link: "https://www.inspiringlaos.com",
+    description: ``,
+  },
+  {
+    img: nogeckospray,
+    title: "No Gecko Spray",
+    company: "Freelance Job",
+    builtWith: `WordPress`,
+    link: "https://www.nogeckospray.com",
+    description: ``,
+  },
+  {
+    img: vananavasky,
+    title: "Vana Nava Sky Hua Hin",
+    company: "Chameleon Strategies.co, ltd.",
+    builtWith: `WordPress`,
+    link: "https://www.vananavasky.com",
+    description: ``,
+  },
+  {
+    img: danslesgolfs2015,
+    title: "Dans les Golfs (2015)",
+    company: "Infogammer Limited Partnership",
+    builtWith: `ASP.NET MVC 5`,
+    description: ``,
+  },
+  {
+    img: scglobal,
+    title: "SCGlobal (2016)",
+    company: "Freelance Job",
+    builtWith: `WordPress`,
+    description: ``,
+  },
+  {
+    img: ink360,
+    title: "INK360.vn",
+    company: "Chameleon Strategies.co, ltd.",
+    builtWith: `WordPress, Vue.js, WebGL`,
     description: ``,
   },
   {
@@ -61,62 +126,6 @@ const data = [
     builtWith: `WordPress`,
     description: ``,
   },
-  {
-    img: ink360,
-    title: "INK360.vn",
-    company: "Chameleon Strategies.co, ltd.",
-    builtWith: `WordPress, Vue.js, WebGL`,
-    description: ``,
-  },
-  {
-    img: mekongmoments,
-    title: "Mekong Moments",
-    company: "Chameleon Strategies.co, ltd.",
-    builtWith: `Angular.js, Node.js, MongoDB`,
-    description: ``,
-  },
-  {
-    img: mekongmomentsInfo,
-    title: "Mekong Moments Information",
-    company: "Chameleon Strategies.co, ltd.",
-    builtWith: `Angular.js, Node.js, MongoDB`,
-    description: ``,
-  },
-  {
-    img: mongoliaTravel,
-    title: "Mongolia.travel",
-    company: "Chameleon Strategies.co, ltd.",
-    builtWith: `Vue.js, Node.js, MongoDB`,
-    description: ``,
-  },
-  {
-    img: inspiringlaos,
-    title: "Inspiring Laos",
-    company: "Chameleon Strategies.co, ltd.",
-    builtWith: `React.js, Node.js, MongoDB`,
-    description: ``,
-  },
-  {
-    img: nogeckospray,
-    title: "No Gecko Spray",
-    company: "Freelance Job",
-    builtWith: `WordPress`,
-    description: ``,
-  },
-  {
-    img: vananavasky,
-    title: "Vana Nava Sky Hua Hin",
-    company: "Chameleon Strategies.co, ltd.",
-    builtWith: `WordPress`,
-    description: ``,
-  },
-  {
-    img: scglobal,
-    title: "SCGlobal (2016)",
-    company: "Freelance Job",
-    builtWith: `WordPress`,
-    description: ``,
-  },
 ];
 
 export default function init() {
@@ -125,7 +134,21 @@ export default function init() {
   data.forEach((d) => {
     delay += delayStep;
     jQuery(
-      `<div class="portfolio-item" data-aos="fade-up" data-aos-delay="${delay}"><img src="${d.img}" class="portfolio-item-img" /><h5 class="portfolio-item-title">${d.title}</h5></div>`
+      `<div class="portfolio-item" data-aos="fade-up" data-aos-delay="${delay}">
+        <img src="${d.img}" class="portfolio-item-img" />
+        <h5 class="portfolio-item-title">${d.title}</h5>
+        <div class="portfolio-item-built-with"><strong>Using:</strong> ${
+          d.builtWith
+        }</div>
+        <div class="portfolio-item-link">
+        <strong>Link</strong>: 
+          <a href="${
+            d.link || "javascript:void(0);"
+          }" target="_blank" rel="noreferrer noopener">${
+        d.link || "Not available"
+      }</a>
+        </div>
+      </div>`
     ).appendTo(portfolio);
   });
 }
