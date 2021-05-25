@@ -1,19 +1,18 @@
-import Masonry from "masonry-layout";
 import jQuery from "jquery";
 
-import kingfreshfarm from "../img/portfolio/kingfreshfarm.png";
-import smksteel from "../img/portfolio/smksteel.png";
+import kingfreshfarm from "../img/portfolio/kingfreshfarm.jpg";
+import smksteel from "../img/portfolio/smksteel.jpg";
 import tgfresh from "../img/portfolio/tgfresh.png";
 import danslesgolfs2015 from "../img/portfolio/danslesgolfs_2015.png";
 import hippocheeze from "../img/portfolio/hippocheeze.png";
 import cmoffice from "../img/portfolio/cmoffice.png";
-import ink360 from "../img/portfolio/ink360.png";
-import inspiringlaos from "../img/portfolio/inspiringlaos.png";
-import mekongmoments from "../img/portfolio/mekongmoments.png";
-import mekongmomentsInfo from "../img/portfolio/mekongmoments_info.png";
+import ink360 from "../img/portfolio/ink360.jpg";
+import inspiringlaos from "../img/portfolio/inspiringlaos.jpg";
+import mekongmoments from "../img/portfolio/mekongmoments.jpg";
+import mekongmomentsInfo from "../img/portfolio/mekongmoments_info.jpg";
 import mongoliaTravel from "../img/portfolio/mongolia_travel.png";
 import nogeckospray from "../img/portfolio/nogeckospray.png";
-import vananavasky from "../img/portfolio/vananavasky.png";
+import vananavasky from "../img/portfolio/vananavasky.jpg";
 import scglobal from "../img/portfolio/scglobal-2016.png";
 
 const delayStep = 50;
