@@ -153,6 +153,9 @@ section {
       margin: 50px auto 0;
 
       .button {
+        color: #fff;
+        text-decoration: none;
+
         .icon {
           margin-left: 10px;
           transition: 0.3s ease all;
@@ -263,6 +266,10 @@ section {
     background-color: white;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
     text-align: center;
+
+    &.unavailable a {
+      cursor: not-allowed;
+    }
 
     .portfolio-item-title {
       font-weight: bold;

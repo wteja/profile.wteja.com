@@ -133,8 +133,12 @@ export default function init() {
   data.forEach((d) => {
     delay += delayStep;
     jQuery(
-      `<div class="portfolio-item" data-aos="fade-up" data-aos-delay="${delay}">
-        <img src="${d.img}" class="portfolio-item-img" />
+      `<div class="portfolio-item${!d.link ? " unavailable" : ""}" data-aos="fade-up" data-aos-delay="${delay}">
+      <a href="${
+        d.link || "javascript:void(0);"
+      }" target="_blank" rel="noreferrer noopener">
+      <img src="${d.img}" class="portfolio-item-img" />
+      </a>
         <h5 class="portfolio-item-title">${d.title}</h5>
         <div class="portfolio-item-built-with"><strong>Using:</strong> ${
           d.builtWith
