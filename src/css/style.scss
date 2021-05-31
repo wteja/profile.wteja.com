@@ -510,7 +510,7 @@ section {
   }
 
   section {
-    padding: 3rem;
+    padding: 1rem;
   }
 
   #site-header .intro {
@@ -559,7 +559,7 @@ section {
     .skills-collections {
       display: grid;
       grid-auto-rows: 1fr;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
     }
   }
 
