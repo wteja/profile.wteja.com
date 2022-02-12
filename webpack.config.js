@@ -68,8 +68,8 @@ const configFunc = ({ mode }) => {
             new MiniCssExtractPlugin(),
             new CopyWebpackPlugin([
                 'src/manifest.json',
-                //'src/netlify.toml',
-                'src/_redirects'
+                'src/_redirects',
+                { from: 'src/img/screenshot.png', to: 'assets/images/screenshot.png' }
             ])
         ],
         devServer: {
