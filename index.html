@@ -19,6 +19,7 @@
 
   <link rel="preload" href="/fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
+  <script src="/portfolio-motion.js" defer></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Weerayut Teja","jobTitle":"Software Development Manager","email":"mailto:teja.weerayut@gmail.com","url":"https://wteja.netlify.app/","address":{"@type":"PostalAddress","addressLocality":"Chiang Mai","addressCountry":"TH"},"sameAs":["https://github.com/wteja","https://www.linkedin.com/in/wteja/","https://medium.com/@wteja"]}
   </script>
@@ -51,10 +52,17 @@
       </p>
     </div>
 
-    <figure class="hero-project">
-      <img src="/img/work/mongolia_travel.webp" width="760" height="428" alt="Earlier homepage of Mongolia.travel">
-      <figcaption><span>Mongolia.travel</span><span>Earlier client work</span></figcaption>
-    </figure>
+    <div class="project-stage" aria-label="Selected earlier client work">
+      <figure class="hero-project">
+        <div class="project-image"><img id="featured-image" src="/img/work/mongolia_travel.webp" width="760" height="428" alt="Earlier homepage of Mongolia.travel"></div>
+        <figcaption><span id="featured-name" aria-live="polite">Mongolia.travel</span><span>Earlier client work</span></figcaption>
+      </figure>
+      <div class="project-controls" hidden aria-label="Choose a featured project">
+        <button type="button" aria-pressed="true" data-project="mongolia">Mongolia.travel</button>
+        <button type="button" aria-pressed="false" data-project="smk">SMK Steel</button>
+        <button type="button" aria-pressed="false" data-project="mekong">Mekong Moments</button>
+      </div>
+    </div>
   </section>
 
   <p class="band">Based in Chiang Mai, Thailand <span>Web · IoT · AI</span></p>
