@@ -133,12 +133,14 @@
   function setupGallery() {
     if (!(wide.matches && finePointer) || !platesSection || !plates) return;
     platesSection.classList.add("is-pinned");
+    var header = document.querySelector(".top");
+    var headerH = header ? header.offsetHeight : 0;
     window.gsap.to(plates, {
       x: function () { return -travelDistance(); },
       ease: "none",
       scrollTrigger: {
         trigger: platesSection,
-        start: "top top",
+        start: function () { return "top " + (header ? header.offsetHeight : 0) + "px"; },
         end: function () { return "+=" + travelDistance(); },
         pin: true,
         scrub: 1,
