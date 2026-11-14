@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Weerayut Teja · Software that ships, and keeps running</title>
   <meta name="description" content="Weerayut Teja is a software development manager in Chiang Mai, Thailand. He builds and runs web, IoT and AI products for businesses, with 15+ years in production systems.">
-  <meta name="theme-color" content="#f1f2ee">
+  <meta name="theme-color" content="#0b0b0c">
   <link rel="canonical" href="https://wteja.netlify.app/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://wteja.netlify.app/">
@@ -17,176 +17,226 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
   <link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png">
 
+  <link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
-  <script src="/portfolio-motion.js" defer></script>
+  <script src="/vendor/gsap.min.js" defer></script>
+  <script src="/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="/vendor/lenis.min.js" defer></script>
+  <script src="/motion.js" defer></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Weerayut Teja","jobTitle":"Software Development Manager","email":"mailto:teja.weerayut@gmail.com","url":"https://wteja.netlify.app/","address":{"@type":"PostalAddress","addressLocality":"Chiang Mai","addressCountry":"TH"},"sameAs":["https://github.com/wteja","https://www.linkedin.com/in/wteja/","https://medium.com/@wteja"]}
   </script>
 </head>
 <body>
 <a class="skip" href="#work">Skip to work</a>
+<div class="grain" aria-hidden="true"></div>
 
-<div class="sack">
+<header class="top">
+  <a class="mark" href="#top">Weerayut Teja<span class="mark-dot" aria-hidden="true"></span></a>
+  <nav aria-label="Sections">
+    <a href="#work">Work</a>
+    <a href="#how">How I work</a>
+    <a href="#writing">Writing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <header class="strip">
-    <a class="name" href="#top" aria-label="Weerayut Teja, back to top">Weerayut Teja</a>
-    <nav aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#how">How I work</a>
-      <a href="#writing">Writing</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<main>
 
   <section class="hero" id="top">
-    <div class="hero-copy">
-      <h1>Good software is only the beginning.</h1>
-      <p class="lede">I'm Weerayut Teja, a software development manager in Chiang Mai. For 15+ years I have built web, IoT and AI products for businesses in Thailand and the region, and I stay on to run them.</p>
-      <p class="hero-actions">
-        <a class="btn" href="mailto:teja.weerayut@gmail.com?subject=Project%20enquiry">
-          Email me
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="square"/></svg>
-        </a>
-        <a class="btn-quiet" href="#work">See the work</a>
-      </p>
-    </div>
+    <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Software Development Manager — Chiang Mai, Thailand</p>
+    <h1 class="hero-title" aria-label="Weerayut Teja">
+      <span class="line"><span class="line-inner">Weerayut</span></span>
+      <span class="line"><span class="line-inner">Teja<span class="title-dot" aria-hidden="true">.</span></span></span>
+    </h1>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="lede">Good software is only the beginning. For 15+ years I have built web, IoT and AI products for businesses in Thailand and the region — and I stay on to run them.</p>
+        <p class="hero-actions">
+          <a class="btn" href="mailto:teja.weerayut@gmail.com?subject=Project%20enquiry">
+            Email me
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn-ghost" href="#work">See the work</a>
+        </p>
+      </div>
 
-    <div class="project-stage" aria-label="Selected earlier client work">
-      <figure class="hero-project">
-        <div class="project-image"><img id="featured-image" src="/img/work/mongolia_travel.webp" width="760" height="428" alt="Earlier homepage of Mongolia.travel"></div>
-        <figcaption><span id="featured-name" aria-live="polite">Mongolia.travel</span><span>Earlier client work</span></figcaption>
-      </figure>
-      <div class="project-controls" hidden aria-label="Choose a featured project">
-        <button type="button" aria-pressed="true" data-project="mongolia">Mongolia.travel</button>
-        <button type="button" aria-pressed="false" data-project="smk">SMK Steel</button>
-        <button type="button" aria-pressed="false" data-project="mekong">Mekong Moments</button>
+      <div class="stage" aria-label="Selected earlier client work">
+        <figure class="stage-frame">
+          <div class="stage-image"><img id="featured-image" src="/img/work/mongolia_travel.webp" width="760" height="428" alt="Earlier homepage of Mongolia.travel"></div>
+          <figcaption><span id="featured-name" aria-live="polite">Mongolia.travel</span><span class="stage-tag">Earlier client work</span></figcaption>
+        </figure>
+        <div class="stage-tabs" aria-label="Choose a featured project">
+          <button type="button" aria-pressed="true" data-project="mongolia">Mongolia.travel</button>
+          <button type="button" aria-pressed="false" data-project="smk">SMK Steel</button>
+          <button type="button" aria-pressed="false" data-project="mekong">Mekong Moments</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <p class="band">Based in Chiang Mai, Thailand <span>Web · IoT · AI</span></p>
+  <p class="sr-only">Based in Chiang Mai, Thailand. Web, IoT, AI, DevOps, SRE. 15 years in production.</p>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Web&nbsp;·&nbsp;IoT&nbsp;·&nbsp;AI&nbsp;·&nbsp;DevOps&nbsp;·&nbsp;SRE&nbsp;·&nbsp;Chiang&nbsp;Mai&nbsp;·&nbsp;15&nbsp;years&nbsp;in&nbsp;production&nbsp;·&nbsp;</span><span>Web&nbsp;·&nbsp;IoT&nbsp;·&nbsp;AI&nbsp;·&nbsp;DevOps&nbsp;·&nbsp;SRE&nbsp;·&nbsp;Chiang&nbsp;Mai&nbsp;·&nbsp;15&nbsp;years&nbsp;in&nbsp;production&nbsp;·&nbsp;</span>
+    </div>
+  </div>
 
-  <main>
-    <section class="block" id="work" aria-labelledby="work-h">
+  <section class="work" id="work" aria-labelledby="work-h">
+    <header class="section-head">
+      <span class="section-no" aria-hidden="true">01</span>
       <h2 id="work-h">Work</h2>
       <p class="intro">A selection of client work, team products and open-source tools, with my role in each made clear.</p>
+    </header>
 
-      <ol class="manifest">
-        <li>
-          <span class="ticket ticket-red">Freelance</span>
-          <div class="m-body">
-            <h3>World Yoga Alliance</h3>
-            <p>A global directory of yoga schools, teachers and events, in four languages and three currencies. I redesigned it on a modern stack for speed and performance, connected a payment gateway and developed further features.</p>
+    <ol class="index">
+      <li class="row">
+        <a class="row-link" href="https://worldyogaalliance.org" target="_blank" rel="noopener">
+          <span class="row-no" aria-hidden="true">01</span>
+          <div class="row-main">
+            <span class="row-name">World Yoga Alliance</span>
+            <span class="row-desc">A global directory of yoga schools, teachers and events, in four languages and three currencies. I redesigned it on a modern stack for speed and performance, connected a payment gateway and developed further features.</span>
           </div>
-          <a class="m-link" href="https://worldyogaalliance.org" target="_blank" rel="noopener">worldyogaalliance.org<span class="sr"> (opens in a new tab)</span></a>
-        </li>
-        <li>
-          <span class="ticket ticket-red">Freelance</span>
-          <div class="m-body">
-            <h3>PassionExplorer</h3>
-            <p>Travel discovery by passion or destination. I developed the AI Trip Planner for tourism.</p>
+          <span class="row-meta"><span class="chip">Freelance</span><span class="row-url">worldyogaalliance.org</span></span>
+          <span class="row-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </li>
+      <li class="row">
+        <a class="row-link" href="https://passionexplorer.com" target="_blank" rel="noopener">
+          <span class="row-no" aria-hidden="true">02</span>
+          <div class="row-main">
+            <span class="row-name">PassionExplorer</span>
+            <span class="row-desc">Travel discovery by passion or destination. I developed the AI Trip Planner for tourism.</span>
           </div>
-          <a class="m-link" href="https://passionexplorer.com" target="_blank" rel="noopener">passionexplorer.com<span class="sr"> (opens in a new tab)</span></a>
-        </li>
-        <li>
-          <span class="ticket ticket-blue">Team product</span>
-          <div class="m-body">
-            <h3>iTrend</h3>
-            <p>The Thailand IoT platform at the company where I work. A team built it, not me alone. Most of my time there goes to development, DevOps and SRE.</p>
+          <span class="row-meta"><span class="chip">Freelance</span><span class="row-url">passionexplorer.com</span></span>
+          <span class="row-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </li>
+      <li class="row">
+        <a class="row-link" href="https://itrend.itthirit.io" target="_blank" rel="noopener">
+          <span class="row-no" aria-hidden="true">03</span>
+          <div class="row-main">
+            <span class="row-name">iTrend</span>
+            <span class="row-desc">The Thailand IoT platform at the company where I work. A team built it, not me alone. Most of my time there goes to development, DevOps and SRE.</span>
           </div>
-          <a class="m-link" href="https://itrend.itthirit.io" target="_blank" rel="noopener">itrend.itthirit.io<span class="sr"> (opens in a new tab)</span></a>
-        </li>
-        <li>
-          <span class="ticket ticket-blue-solid">Open source</span>
-          <div class="m-body">
-            <h3>Tools I publish</h3>
+          <span class="row-meta"><span class="chip">Team product</span><span class="row-url">itrend.itthirit.io</span></span>
+          <span class="row-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </li>
+      <li class="row row-repos">
+        <div class="row-link">
+          <span class="row-no" aria-hidden="true">04</span>
+          <div class="row-main">
+            <a class="row-name" href="https://github.com/wteja" target="_blank" rel="noopener">Tools I publish<span class="sr-only"> (opens in a new tab)</span></a>
             <ul class="repos">
-              <li><a href="https://github.com/wteja/pdf-converter" target="_blank" rel="noopener">pdf-converter</a> PDF converter server powered by LibreOffice, in Go. 21 stars.</li>
-              <li><a href="https://github.com/plume-newsletter/plume-go" target="_blank" rel="noopener">plume-go</a> Self-hosted newsletter platform on your own Amazon SES.</li>
-              <li><a href="https://github.com/wteja/exchange-ai-connector" target="_blank" rel="noopener">exchange-ai-connector</a> MCP server for human-gated Microsoft Graph email and calendar.</li>
-              <li><a href="https://github.com/wteja/rag-compliance-engine" target="_blank" rel="noopener">rag-compliance-engine</a> RAG with access control, audit and PII redaction at the data layer.</li>
+              <li><a href="https://github.com/wteja/pdf-converter" target="_blank" rel="noopener">pdf-converter</a><span>PDF converter server powered by LibreOffice, in Go. 21 stars.</span></li>
+              <li><a href="https://github.com/plume-newsletter/plume-go" target="_blank" rel="noopener">plume-go</a><span>Self-hosted newsletter platform on your own Amazon SES.</span></li>
+              <li><a href="https://github.com/wteja/exchange-ai-connector" target="_blank" rel="noopener">exchange-ai-connector</a><span>MCP server for human-gated Microsoft Graph email and calendar.</span></li>
+              <li><a href="https://github.com/wteja/rag-compliance-engine" target="_blank" rel="noopener">rag-compliance-engine</a><span>RAG with access control, audit and PII redaction at the data layer.</span></li>
             </ul>
           </div>
-          <a class="m-link" href="https://github.com/wteja" target="_blank" rel="noopener">github.com/wteja<span class="sr"> (opens in a new tab)</span></a>
-        </li>
-      </ol>
+          <span class="row-meta"><span class="chip">Open source</span><span class="row-url">github.com/wteja</span></span>
+          <a class="row-arrow" href="https://github.com/wteja" target="_blank" rel="noopener" aria-label="Tools I publish on GitHub (opens in a new tab)"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </li>
+    </ol>
 
-      <h3 class="sub">Earlier client sites, still online</h3>
+    <div class="plates-head">
+      <h3>Earlier client sites, still online</h3>
       <p class="sub-note">Screenshots are from when I built them. The owners may have changed the sites since.</p>
+    </div>
+  </section>
+
+  <section class="plates-section" aria-label="Earlier client sites gallery">
+    <div class="plates-pin">
       <ul class="plates">
-        <li>
+        <li class="plate">
           <a href="https://smksteel.com" target="_blank" rel="noopener">
-            <img src="/img/work/smksteel.webp" width="760" height="428" loading="lazy" alt="Home page of the SMK Steel website">
-            <span>SMK Steel<small>Vue.js, Gridsome</small></span>
+            <figure><img src="/img/work/smksteel.webp" width="760" height="428" loading="lazy" alt="Home page of the SMK Steel website"></figure>
+            <span class="plate-cap"><span class="plate-no">A</span><span class="plate-name">SMK Steel<small>Vue.js, Gridsome</small></span></span>
           </a>
         </li>
-        <li>
+        <li class="plate">
           <a href="https://www.mongolia.travel" target="_blank" rel="noopener">
-            <img src="/img/work/mongolia_travel.webp" width="760" height="428" loading="lazy" alt="Home page of the Mongolia.travel website">
-            <span>Mongolia.travel<small>Vue.js, Node.js, MongoDB</small></span>
+            <figure><img src="/img/work/mongolia_travel.webp" width="760" height="428" loading="lazy" alt="Home page of the Mongolia.travel website"></figure>
+            <span class="plate-cap"><span class="plate-no">B</span><span class="plate-name">Mongolia.travel<small>Vue.js, Node.js, MongoDB</small></span></span>
           </a>
         </li>
-        <li>
+        <li class="plate">
           <a href="https://www.mekongmoments.com" target="_blank" rel="noopener">
-            <img src="/img/work/mekongmoments.webp" width="760" height="428" loading="lazy" alt="Home page of the Mekong Moments website">
-            <span>Mekong Moments<small>Angular, Node.js, MongoDB</small></span>
+            <figure><img src="/img/work/mekongmoments.webp" width="760" height="428" loading="lazy" alt="Home page of the Mekong Moments website"></figure>
+            <span class="plate-cap"><span class="plate-no">C</span><span class="plate-name">Mekong Moments<small>Angular, Node.js, MongoDB</small></span></span>
           </a>
         </li>
-        <li>
+        <li class="plate">
           <a href="https://www.kingfreshfarm.com" target="_blank" rel="noopener">
-            <img src="/img/work/kingfreshfarm.webp" width="760" height="428" loading="lazy" alt="Home page of the King Fresh Farm website">
-            <span>King Fresh Farm<small>WordPress, Elementor</small></span>
+            <figure><img src="/img/work/kingfreshfarm.webp" width="760" height="428" loading="lazy" alt="Home page of the King Fresh Farm website"></figure>
+            <span class="plate-cap"><span class="plate-no">D</span><span class="plate-name">King Fresh Farm<small>WordPress, Elementor</small></span></span>
           </a>
         </li>
-        <li>
+        <li class="plate">
           <a href="https://www.tgfresh.com" target="_blank" rel="noopener">
-            <img src="/img/work/tgfresh.webp" width="760" height="428" loading="lazy" alt="Home page of the Tropical Green website">
-            <span>Tropical Green<small>WordPress, Elementor</small></span>
+            <figure><img src="/img/work/tgfresh.webp" width="760" height="428" loading="lazy" alt="Home page of the Tropical Green website"></figure>
+            <span class="plate-cap"><span class="plate-no">E</span><span class="plate-name">Tropical Green<small>WordPress, Elementor</small></span></span>
           </a>
         </li>
       </ul>
-      <p class="retired"><span class="ticket ticket-retired">Retired</span> Many other sites I built over the years are offline now because their owners stopped maintaining them.</p>
-    </section>
+      <p class="retired"><span class="chip chip-dim">Retired</span> Many other sites I built over the years are offline now because their owners stopped maintaining them.</p>
+    </div>
+  </section>
 
-    <section class="block" id="how" aria-labelledby="how-h">
+  <section class="how" id="how" aria-labelledby="how-h">
+    <header class="section-head">
+      <span class="section-no" aria-hidden="true">02</span>
       <h2 id="how-h">How I work</h2>
-      <dl class="how">
-        <div>
-          <dt>Build</dt>
-          <dd>Web apps, APIs and mobile apps in C#/.NET, TypeScript and Node.js, Go, Python and Flutter.</dd>
+    </header>
+    <div class="how-grid">
+      <div class="how-list">
+        <div class="how-item">
+          <h3 class="how-term">Build</h3>
+          <p class="how-desc">Web apps, APIs and mobile apps in C#/.NET, TypeScript and Node.js, Go, Python and Flutter.</p>
         </div>
-        <div>
-          <dt>Run</dt>
-          <dd>DevOps and SRE: deployment, infrastructure on AWS and GCP, and keeping production healthy after launch.</dd>
+        <div class="how-item">
+          <h3 class="how-term">Run</h3>
+          <p class="how-desc">DevOps and SRE: deployment, infrastructure on AWS and GCP, and keeping production healthy after launch.</p>
         </div>
-        <div>
-          <dt>Lead</dt>
-          <dd>I manage software teams at an IoT solutions company in Chiang Mai, with 15+ years of turning ideas into production systems.</dd>
+        <div class="how-item">
+          <h3 class="how-term">Lead</h3>
+          <p class="how-desc">I manage software teams at an IoT solutions company in Chiang Mai, with 15+ years of turning ideas into production systems.</p>
         </div>
-      </dl>
-
-      <div class="ingredients">
-        <h3>Tools and technologies</h3>
-        <p>C#, .NET, TypeScript, Node.js, NestJS, Go, Python, Dart, Flutter, React, Next.js, Vue, Angular, PostgreSQL, MongoDB, Redis, Docker, AWS, GCP.</p>
       </div>
-    </section>
+      <aside class="tools">
+        <h3>Tools and technologies</h3>
+        <ul class="tool-tags">
+          <li>C#</li><li>.NET</li><li>TypeScript</li><li>Node.js</li><li>NestJS</li><li>Go</li><li>Python</li><li>Dart</li><li>Flutter</li><li>React</li><li>Next.js</li><li>Vue</li><li>Angular</li><li>PostgreSQL</li><li>MongoDB</li><li>Redis</li><li>Docker</li><li>AWS</li><li>GCP</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
 
-    <section class="block" id="writing" aria-labelledby="writing-h">
+  <section class="writing" id="writing" aria-labelledby="writing-h">
+    <header class="section-head">
+      <span class="section-no" aria-hidden="true">03</span>
       <h2 id="writing-h">Writing</h2>
-      <p class="intro">I write about software on Medium: .NET, Node.js, system architecture and building for Thai SMEs.</p>
-      <p><a class="btn-quiet" href="https://medium.com/@wteja" target="_blank" rel="noopener">Read on Medium<span class="sr"> (opens in a new tab)</span></a></p>
-    </section>
-  </main>
+    </header>
+    <a class="writing-link" href="https://medium.com/@wteja" target="_blank" rel="noopener">
+      <span class="writing-line">I write about software on Medium: .NET, Node.js, system architecture and building for Thai SMEs.</span>
+      <span class="writing-cta">Read on Medium<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only"> (opens in a new tab)</span></span>
+    </a>
+  </section>
 
   <section class="contact" id="contact" aria-labelledby="contact-h">
-    <h2 id="contact-h">Something to build, rescue or keep running?</h2>
-    <p class="contact-mail"><a href="mailto:teja.weerayut@gmail.com?subject=Project%20enquiry">teja.weerayut@gmail.com</a></p>
+    <span class="section-no" aria-hidden="true">04</span>
+    <h2 id="contact-h">Something to build, rescue or keep&nbsp;running?</h2>
+    <p class="contact-mail">
+      <a class="mail-link" href="mailto:teja.weerayut@gmail.com?subject=Project%20enquiry"><span>teja.weerayut@gmail.com</span></a>
+    </p>
     <p class="contact-note">Hiring for an engineering lead? Same address.</p>
     <ul class="elsewhere">
-      <li><a href="https://www.linkedin.com/in/wteja/" target="_blank" rel="noopener">LinkedIn<span class="sr"> (opens in a new tab)</span></a></li>
-      <li><a href="https://github.com/wteja" target="_blank" rel="noopener">GitHub<span class="sr"> (opens in a new tab)</span></a></li>
-      <li><a href="https://medium.com/@wteja" target="_blank" rel="noopener">Medium<span class="sr"> (opens in a new tab)</span></a></li>
+      <li><a href="https://www.linkedin.com/in/wteja/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a></li>
+      <li><a href="https://github.com/wteja" target="_blank" rel="noopener">GitHub<span class="sr-only"> (opens in a new tab)</span></a></li>
+      <li><a href="https://medium.com/@wteja" target="_blank" rel="noopener">Medium<span class="sr-only"> (opens in a new tab)</span></a></li>
     </ul>
   </section>
 
@@ -194,6 +244,7 @@
     <span>&copy; 2026 Weerayut Teja</span>
     <span>Chiang Mai, Thailand</span>
   </footer>
-</div>
+
+</main>
 </body>
 </html>
