@@ -1,21 +1,35 @@
 # Design: wteja portfolio
 
-World: a restrained, project-led portfolio for a business audience. Real project screenshots and clearly attributed work provide the visual focus.
+World: a dark studio-gallery portfolio in the Awwwards tradition — near-black canvas, oversized display type, one electric accent, rich but disciplined motion. Real project screenshots and clearly attributed work carry the credibility.
 
 ## Tokens (styles.css :root)
-- Ground `#f1f2ee`, deeper surface `#e2e6de`, light `#f7f8f5`.
-- Ink `#202824`, supporting text `#45534a`, accent `#315b4c`.
-- Public Sans variable, self-hosted; sentence-case headings and navigation.
-- Fine rules separate sections and project rows. No decorative outer frame.
+- Void `#0b0b0c` background, surface `#141416`, bone `#f2f0ea` type, muted `#a3a099` supporting text.
+- Accent lime `#c8f04a`, used only for actions, numerals and highlights; black-on-lime for primary buttons.
+- Hairline rules `#26262a`; film-grain SVG overlay at 7% opacity.
+- Display: Space Grotesk (variable 300–700, self-hosted, uppercase hero, tight letter-spacing). Body: Public Sans (self-hosted).
 
 ## Components
-- Hero: concise introduction, direct email action and a real earlier client screenshot with caption.
-- Work: ruled rows with explicit freelance, team and open-source attribution.
-- Project gallery: existing client screenshots with a note about when they were captured.
-- Contact: dark panel with an email link and social links.
+- Header: sticky, blurred, name mark with lime dot + section nav.
+- Hero: eyebrow role line, two-line giant name with per-line mask reveal, lede, lime "Email me" action, framed featured client screenshot with tab switcher (Mongolia.travel / SMK Steel / Mekong Moments).
+- Marquee band: lime, uppercase services/location ticker (duplicated for the loop; screen readers get a static line).
+- Work index: numbered rows (01–04) — number, name, honest description, attribution chip, outbound link, arrow. Hover: surface wash, lime number/arrow.
+- Plates gallery: pinned horizontal scroll on desktop (GSAP ScrollTrigger), native overflow scroll on touch/mobile; client screenshots with stack captions, capture-date disclaimer and retired-sites note.
+- How I work: Build / Run / Lead list with lime rules; sticky tools card with tag chips.
+- Writing: bordered statement link to Medium.
+- Contact: giant display question, huge lime email link with fill-on-hover, socials.
+- Footer: copyright + location.
 
-## Motion
-Subtle hover feedback only; content does not depend on animation. Reduced-motion settings disable smooth scrolling and minimize transitions.
+## Motion (motion.js, self-hosted GSAP + ScrollTrigger + Lenis in /vendor/)
+- Lenis smooth scroll on fine-pointer desktops only; anchor links routed through it.
+- Hero load timeline: masked title lines stagger up, then eyebrow/lede/actions/stage fade-rise.
+- ScrollTrigger.batch reveals per section; soft parallax on the hero screenshot; pinned horizontal plates gallery (≥900px, fine pointer).
+- Featured screenshot swap replays a clip-path wipe.
+- All animated initial states are set from JS, so the page is fully visible without JavaScript.
+
+## Accessibility
+- WCAG AA contrast (bone/lime on void pass; muted text `#a3a099` ≥ 4.5:1).
+- `prefers-reduced-motion` disables Lenis, marquee animation, parallax, pinning and transitions; content never depends on animation.
+- Skip link, visible lime focus rings, real alt text, aria-pressed tabs, aria-live caption, static sr-only marquee equivalent.
 
 ## Do not
-Do not invent project outcomes or claim team work as solo work. Keep the site static and preserve keyboard access.
+Do not invent project outcomes or claim team work as solo work. Keep the site static (no build step) and preserve keyboard access.

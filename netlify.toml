@@ -1,8 +1,14 @@
 [build]
+  command = "test -f index.html && test -f styles.css"
   publish = "."
 
 [[headers]]
   for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/vendor/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 

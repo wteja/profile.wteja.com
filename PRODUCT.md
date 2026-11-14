@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Plain static HTML/CSS with minimal JS, deployed on Netlify (user's choice). Replaces the 2018 webpack 4 + node-sass + jQuery + Bootstrap build. Contact form and Netlify `sendmail` function are dropped.
+Plain static HTML/CSS/JS, deployed on Netlify (user's choice). Replaces the 2018 webpack 4 + node-sass + jQuery + Bootstrap build. Contact form and Netlify `sendmail` function are dropped. Motion libraries (GSAP, ScrollTrigger, Lenis) are self-hosted in `/vendor` — no CDN runtime dependency, no build step.
 
 ## Users
 
@@ -52,8 +52,8 @@ Real, user-confirmed (do not embellish):
 1. Name only real work, and say plainly whose it is (own build, team build, freelance).
 2. One clear way to reach him: email.
 3. Show how he thinks and operates, not a skills inventory.
-4. Fast and light: static, few requests, no heavy animation.
-5. Senior and calm, never template-like.
+4. Rich but disciplined motion (user decision, 2026-11-14: Awwwards-style dark studio gallery). Self-hosted animation libraries, budgeted payload, everything readable with JS disabled, and `prefers-reduced-motion` honored. Never sacrifice load time or accessibility for the effect.
+5. Dramatic first impression, honest content — never template-like.
 
 ## Accessibility & Inclusion
 
