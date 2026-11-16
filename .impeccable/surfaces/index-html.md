@@ -11,9 +11,9 @@ Visitor: SME owner or hiring lead deciding if Weerayut can be trusted to ship an
 
 ## Direction contract
 
-THESIS: The page is one printed Thai produce sack, not a website wearing a theme. It refuses the dark-mode developer portfolio with a skills logo wall and a card grid.
-OWN-WORLD: Kraft-tan ground with faint weave, two flat spot inks only (ink blue #14213d, rice red #9a1c0c) plus cream panels; heavy 3px ink outlines like a woodcut plate; Bowlby One for display, Public Sans for reading; round seal emblem with ring text; rubber-stamp origin tickets; stack set as an INGREDIENTS label.
-STORY: A visitor learns in one viewport that he builds and runs software for businesses, sees named work with honest origin tickets (freelance, team product, open source, retired), and emails.
-FIRST VIEWPORT: Left two-thirds: heavy headline "Software that ships, and keeps running." with a short line and the email button beneath; right third: the circular seal; top strip: name and four text links; a printed bottom band reading "Product of Chiang Mai, Thailand".
-FORM: Farm-sack print, candidate 6 of the second hand, seed:3eb77a9e7034bdd9, fused with the moon-shadow bazaar's origin tickets.
-FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+THESIS: The page is a printed editorial index — a numbered dossier about an engineer — not a dark portfolio with a hero photo. Type carries it; motion reveals and previews the information instead of decorating around it.
+OWN-WORLD: Warm paper #F3EFE6 with ink #14130F and one spot ink #B3350F; hairline rules instead of cards; oversized Space Grotesk set against an italic Instrument Serif; monospace metadata labels; numbered sections 01–05; grain at 5.5%.
+STORY: In one viewport the visitor learns what he builds, for whom, and that he stays to run it; then reads four real entries with their true origin (freelance, team product, open source), a gallery of earlier client sites, how he works, and how to email him.
+FIRST VIEWPORT: Sticky bar (name, role, nav, Chiang Mai clock, progress line); kicker with an accent rule; WEERAYUT over an italic serif Teja.; lede plus Email me; a facts table (Now / Builds / Runs / Enquiries); an ink ticker of real facts.
+FORM: Editorial index — RossMason®, A24 and AW Portfolio studied at SOTD, rebuilt for readable density: every work row carries number, name, description, role, stack and URL.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
