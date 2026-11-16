@@ -52,7 +52,7 @@ Real, user-confirmed (do not embellish):
 1. Name only real work, and say plainly whose it is (own build, team build, freelance).
 2. One clear way to reach him: email.
 3. Show how he thinks and operates, not a skills inventory.
-4. Rich but disciplined motion (user decision, 2026-11-14: Awwwards-style dark studio gallery). Self-hosted animation libraries, budgeted payload, everything readable with JS disabled, and `prefers-reduced-motion` honored. Never sacrifice load time or accessibility for the effect.
+4. Rich but disciplined motion (user decision, 2026-11-16: an editorial index — paper, ink, one spot colour, numbered sections — replacing the dark studio gallery). Motion reveals and previews the information; it never delays reading. Self-hosted animation libraries, budgeted payload, everything readable with JS disabled, and `prefers-reduced-motion` honored. Never sacrifice load time or accessibility for the effect.
 5. Dramatic first impression, honest content — never template-like.
 
 ## Accessibility & Inclusion
