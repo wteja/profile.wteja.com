@@ -218,6 +218,7 @@
   if (hasST) {
     reveal(".sec-head");
     reveal(".stage, .rows .row");
+    reveal(".case");
     reveal(".retired");
     reveal(".plate");
     reveal(".how-item, .tools");

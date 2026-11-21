@@ -346,10 +346,10 @@ ul, ol, dl { list-style: none; }
 
 /* ---- sections ------------------------------------------------------------- */
 
-.work, .earlier, .how, .writing, .contact {
+.work, .showcase, .earlier, .how, .writing, .contact {
   padding: clamp(3.5rem, 9vh, 6.5rem) var(--gutter) 0;
 }
-.work, .earlier, .how, .writing { border-top: 1px solid var(--rule); }
+.work, .showcase, .earlier, .how, .writing { border-top: 1px solid var(--rule); }
 
 .sec-head {
   display: grid;
@@ -549,6 +549,52 @@ ul, ol, dl { list-style: none; }
 }
 .repos a:hover { color: var(--accent); border-color: var(--accent); }
 .repos span { color: var(--muted); font-size: 0.85rem; }
+
+/* ---- showcase sites (cases) ----------------------------------------------- */
+
+.showcase { padding-bottom: clamp(3rem, 7vh, 5rem); }
+.cases {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 3vw, 2.5rem);
+}
+.case-link {
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+}
+.case-media {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  padding: 0.45rem;
+  overflow: hidden;
+}
+.case-media img {
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.case-link:hover .case-media img { transform: scale(1.025); }
+.case-head { display: grid; grid-template-columns: 2rem minmax(0, 1fr) 1.2rem; align-items: baseline; gap: 0.6rem; padding-top: 0.35rem; }
+.case-no { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.08em; color: var(--accent); }
+.case-name {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+.case-arrow { color: var(--muted); transition: transform 0.35s ease, color 0.2s; align-self: center; }
+.case-link:hover .case-arrow { transform: translate(2px, -2px); color: var(--accent); }
+.case-meta, .case-desc, .case-url { grid-column: 1 / -1; padding-left: 2.6rem; }
+.case-meta { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.case-role { color: var(--ink); border: 1px solid var(--rule-strong); padding: 0.1rem 0.4rem; }
+.case-stack { padding-top: 0.15rem; }
+.case-desc { font-size: 0.9rem; line-height: 1.55; color: var(--muted); max-width: 34rem; text-wrap: pretty; }
+.case-url { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.02em; color: var(--ink); border-bottom: 1px solid transparent; justify-self: start; }
+.case-link:hover .case-url { border-color: var(--accent); }
 
 /* ---- earlier client sites (plates) ---------------------------------------- */
 
@@ -862,6 +908,7 @@ ul, ol, dl { list-style: none; }
 }
 
 @media (max-width: 900px) {
+  .cases { grid-template-columns: minmax(0, 1fr); }
   .bar { grid-template-columns: auto 1fr auto; }
   .bar-role { display: none; }
   .bar-nav { justify-content: flex-end; }
@@ -873,6 +920,8 @@ ul, ol, dl { list-style: none; }
 }
 
 @media (max-width: 640px) {
+  .case-meta, .case-desc, .case-url { padding-left: 0; }
+  .case-head { grid-template-columns: 1.6rem minmax(0, 1fr) 1.2rem; }
   :root { --bar-h: 4.9rem; }
   .bar {
     height: auto;
